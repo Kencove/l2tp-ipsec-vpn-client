@@ -17,5 +17,8 @@ COPY ipsec.secrets /etc/ipsec.secrets
 COPY xl2tpd.conf /etc/xl2tpd/xl2tpd.conf
 COPY options.l2tpd.client /etc/ppp/options.l2tpd.client
 COPY startup.sh /
+COPY test.sh /
+
+RUN chmod +x test.sh 
 
 CMD ["/startup.sh"]
